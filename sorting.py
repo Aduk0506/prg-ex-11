@@ -1,4 +1,5 @@
 import random
+import matplotlib.pyplot as plt
 
 
 
@@ -21,12 +22,20 @@ def selection_sort(values):
                 min_val = values[i]
         values[n], values[min_index] = values[min_index], values[n]
 
-        print(values)
+
     return values
 
+def bubble_sort(values):
+    for j in range(len(values)):
+
+        for n in range(len(values)-1):
+
+            if values[n] > values[n+1]:
+                values[n], values[n+1] = values[n+1], values[n]
 
 
-
+        print(values)
+    return values
 
 
 
@@ -37,5 +46,6 @@ if __name__ == "__main__":
 
     small = random_numbers(5, low=0, high=20)# 5 čísel v rozsahu 0–20
     print(small)
-    selection_sort(values)
+    # selection_sort(values)
+    bubble_sort(values)
 
