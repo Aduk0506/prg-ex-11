@@ -29,7 +29,7 @@ def bubble_sort(values):
     plt.ion()
     plt.show()
     for j in range(len(values)):
-
+        
         for n in range(len(values)-1):
 
             if values[n] > values[n+1]:
